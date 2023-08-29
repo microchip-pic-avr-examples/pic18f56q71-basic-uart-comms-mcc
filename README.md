@@ -1,3 +1,8 @@
+<!-- Please do not change this logo with link -->
+
+[![MCHP](images/microchip.png)](https://www.microchip.com)
+
+
 # Basic Bidirectional UART Communication using the PIC18F56Q71
 ## Overview
 This project uses the MPLAB® Code Configurator (MCC) Melody graphical programming tool to configure the PIC18F56Q71 device populating a Curiosity Nano (Cnano) board to receive and output single ASCII characters over the integrated Serial/CDC port. When the switch on the Cnano board is pressed, a pin change interrupt is triggered and the ASCII character 'S' is transmitted over the Universal Asynchronous Receiver Transmitter (UART), converted to the USB protocol and then displayed in the MPLAB Data Visualizer terminal window. When the ASCII character 'T' (note the capitalization) is entered in the Data Visualizer terminal window, the value is transmitted over USB and then converted to the UART protocol. A UART Receive interrupt will then be triggered and the LED on the Cnano board will toggle ON/OFF. Note that any other character will not generate the interrupt.

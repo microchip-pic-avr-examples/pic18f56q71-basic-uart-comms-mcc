@@ -9,42 +9,23 @@ This project uses the MPLAB® Code Configurator (MCC) Melody graphical programmi
 
 ![Basic Bidirectionsl UART Communications](images/mainImage.png)
 
-
 **Note:** The following project can be used as a reference for most PIC® devices, with some modifications. 
 
 ## Related Documentation
-- [Get Started Now With PIC® Microcontrollers (MCUs)]() - Includes tool installation and other introductory resources
+- [Get Started Now With PIC® Microcontrollers (MCUs)](https://www.microchip.com/en-us/products/microcontrollers-and-microprocessors/8-bit-mcus/pic-mcus/get-started-now?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_pic18q71&utm_content=pic18f56q71-basic-uart-comms-mplab-mcc-github&utm_bu=MCU08) - Includes tool installation and other introductory resources
+- [PIC18F56Q71 Device Homepage](https://www.microchip.com/en-us/product/pic18f25Q71?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_pic18q71&utm_content=pic18f56q71-basic-uart-comms-mplab-mcc-github&utm_bu=MCU08) - Includes data sheet and other related documentation
+- [Universal Asynchronous Receiver and Transmitter (UART) Peripheral Homepage](https://www.microchip.com/en-us/products/microcontrollers-and-microprocessors/8-bit-mcus/core-independent-and-analog-peripherals/communication-connectivity-peripherals/uart-peripherals?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_pic18q71&utm_content=pic18f56q71-basic-uart-comms-mplab-mcc-github&utm_bu=MCU08) - Includes additional reference documentation
+- [MCC Melody API Reference for AVR MCU Families Version 14](https://onlinedocs.microchip.com/oxy/GUID-420E6AAC-9141-47BF-A4C7-A6EA17246D0D-en-US-16/GUID-BC229F28-29AC-46A3-9FAA-1681C2E93A5C.html#GUID-BC229F28-29AC-46A3-9FAA-1681C2E93A5C?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_pic18q71&utm_content=pic18f56q71-basic-uart-comms-mplab-mcc-github&utm_bu=MCU08)
+
 
 ## Software Used
-!!!
-<ul>
-<li> <a target="_blank" href="http://www.microchip.com/mplab/mplab-x-ide">MPLAB X IDE</a> v6.10 or newer
- </li>
- <li> <a target="_blank" href="http://www.microchip.com/mplab/xc8">MPLAB XC8 Compiler</a> v2.41 or newer
 
- </li>
-</ul>
+- [MPLAB® X IDE 6.1.0](https://www.microchip.com/en-us/tools-resources/develop/mplab-x-ide?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_pic18q71&utm_content=pic18f56q71-basic-uart-comms-mplab-mcc-github&utm_bu=MCU08) or newer
+- [MPLAB® XC8 2.41.0](https://www.microchip.com/en-us/tools-resources/develop/mplab-xc-compilers?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_pic18q71&utm_content=pic18f56q71-basic-uart-comms-mplab-mcc-github&utm_bu=MCU08) or newer
 
 ## Hardware Used
-!!!
-<ul>
 
-<li> <a target="_blank" href="https://www.microchip.com/en-us/development-tool/EV01G21A">PIC18F56Q71 Curiosity Nano Evaluation Kit</a> for PIC MCU version
- </li>
-</ul>
-
-## References !!!Delete Section after updating Related Documentation!!!
-<ul>
-<li><a target="_blank" href="https://www.microchip.com/en-us/products/microcontrollers-and-microprocessors/8-bit-mcus/pic-mcus/get-started-now">Get Started Now With PIC® Microcontrollers (MCUs)</a> homepage includes tool installation and other introductory resources</li>
-<li> <a target="_blank" href="https://www.microchip.com/en-us/product/PIC18F56Q71">PIC18F56Q71 Device Homepage</a> includes datasheet and other related documentation
- </li>
-  <li> <a target="_blank" href="https://www.microchip.com/en-us/products/microcontrollers-and-microprocessors/8-bit-mcus/core-independent-and-analog-peripherals/communication-connectivity-peripherals/uart-peripherals"> Universal Asynchronous Receiver and Transmitter (UART) Peripheral Homepage </a> 
-  includes additional reference documentation
- </li>
-   <li> <a target="_blank" href="https://onlinedocs.microchip.com/oxy/GUID-420E6AAC-9141-47BF-A4C7-A6EA17246D0D-en-US-14/GUID-BC229F28-29AC-46A3-9FAA-1681C2E93A5C.html"> UART Driver MCC Melody API Reference for PIC16F/18F MCU Families </a> 
- 
- </li>
-</ul>
+- [PIC18F56Q71 Curiosity Nano Evaluation Kit](https://www.microchip.com/en-us/development-tool/EV01G21A?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_pic18q71&utm_content=pic18f56q71-basic-uart-comms-mplab-mcc-github&utm_bu=MCU08)
 
 ## Hardware Configuration using the MCC Melody
 

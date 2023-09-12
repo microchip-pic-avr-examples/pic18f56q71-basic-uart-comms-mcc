@@ -97,7 +97,7 @@ Note from the Curiosity Nano schematics that the SW0 is active LOW and connected
 
 An Interrupt-on-Change (IoC) will be generated when the voltage on the pin associated with SW0 changes. Since the switch on the Curiosity Nano board is active LOW, this means that the switch resting state will be HIGH until pressed. Therefore, the Interrrupt on Change column setting for the SW0 pin is configured to trigger on the negative transition of the pin voltage using the drop-down menu:
 
-![Enabling Sense Falling Edge](images/negativeIOC.png.png)
+![Enabling Sense Falling Edge](images/negativeIOC.png)
 
 Click the **Generate** button in the **Project Resources** to generate the API based on the above configurations:
 

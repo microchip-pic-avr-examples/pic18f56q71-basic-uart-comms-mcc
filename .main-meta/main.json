@@ -4,8 +4,8 @@
     "content": {
         "metaDataVersion": "1.3.0",
         "name": "com.microchip.mcu8.mplabx.project.pic18f56q71-basic-uart-comms-mcc",
-        "version": " ",
-        "displayName": "",
+        "version": "1.0.0",
+        "displayName": "PIC18F56Q71 Basic Uart Comms",
         "projectName": "pic18f56q71-basic-uart-comms-mcc",
         "shortDescription": "In this project, Melody will be used to configure the PIC18F56Q71 Curiosity Nano (Cnano) board to receive and output single ASCII characters over the integrated Serial/CDC port.",
         "ide": {
@@ -19,12 +19,12 @@
             }
         ],
         "dfp": {
-            "name": "",
-            "semverRange": ""
+            "name": "PIC18F-Q_DFP",
+            "semverRange": "^1.18.389"
         },
         "configurator": {
-            "name": "",
-            "semverRange": ""
+            "name": "MCC",
+            "semverRange": ">=5.3.7"
         },
         "device": {
             "metaDataVersion": "1.0.0",
@@ -37,8 +37,8 @@
             }
         },
         "author": "Nathaniel Thompson",
-        "peripherals": [],
-        "keywords": [],
+        "peripherals": ["UART"],
+        "keywords": ["USART","UART","MCC","Melody", "INT"],
         "additionalData": {
             "longDescription": {
                 "metaDataVersion": "1.0.0",

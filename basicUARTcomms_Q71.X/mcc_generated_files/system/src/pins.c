@@ -12,7 +12,7 @@
 */
 
 /*
-© [2023] Microchip Technology Inc. and its subsidiaries.
+© [2024] Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms, you may use Microchip 
     software and any derivatives exclusively with Microchip products. 
@@ -44,7 +44,7 @@ void PIN_MANAGER_Initialize(void)
     */
     LATA = 0x0;
     LATB = 0x0;
-    LATC = 0x80;
+    LATC = 0x0;
     LATD = 0x0;
     LATE = 0x0;
     LATF = 0x0;

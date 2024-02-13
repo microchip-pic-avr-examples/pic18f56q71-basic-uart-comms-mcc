@@ -15,7 +15,7 @@ This project uses the MPLAB® Code Configurator (MCC) Melody graphical programmi
 - [Get Started Now With PIC® Microcontrollers (MCUs)](https://www.microchip.com/en-us/products/microcontrollers-and-microprocessors/8-bit-mcus/pic-mcus/get-started-now?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_pic18q71&utm_content=pic18f56q71-basic-uart-comms-mplab-mcc-github&utm_bu=MCU08) - Includes tool installation and other introductory resources
 - [PIC18F56Q71 Device Homepage](https://www.microchip.com/en-us/product/pic18f25Q71?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_pic18q71&utm_content=pic18f56q71-basic-uart-comms-mplab-mcc-github&utm_bu=MCU08) - Includes data sheet and other related documentation
 - [Universal Asynchronous Receiver and Transmitter (UART) Peripheral Homepage](https://www.microchip.com/en-us/products/microcontrollers-and-microprocessors/8-bit-mcus/core-independent-and-analog-peripherals/communication-connectivity-peripherals/uart-peripherals?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_pic18q71&utm_content=pic18f56q71-basic-uart-comms-mplab-mcc-github&utm_bu=MCU08) - Includes additional reference documentation
-- [MCC Melody API Reference for AVR MCU Families Version 14](https://onlinedocs.microchip.com/oxy/GUID-420E6AAC-9141-47BF-A4C7-A6EA17246D0D-en-US-16/GUID-BC229F28-29AC-46A3-9FAA-1681C2E93A5C.html#GUID-BC229F28-29AC-46A3-9FAA-1681C2E93A5C?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_pic18q71&utm_content=pic18f56q71-basic-uart-comms-mplab-mcc-github&utm_bu=MCU08)
+- [MCC Melody API Reference for PIC MCU Families](https://onlinedocs.microchip.com/v2/keyword-lookup?keyword=SCF-PIC8-UART&version=latest&redirect=true)
 
 
 ## Software Used

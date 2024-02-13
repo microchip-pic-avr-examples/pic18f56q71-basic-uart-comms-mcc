@@ -11,7 +11,7 @@
 */
 
 /*
-© [2023] Microchip Technology Inc. and its subsidiaries.
+© [2024] Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms, you may use Microchip 
     software and any derivatives exclusively with Microchip products. 
@@ -83,6 +83,10 @@ void __interrupt() INTERRUPT_InterruptManager (void)
     if(PIE0bits.IOCIE == 1 && PIR0bits.IOCIF == 1)
     {
         PIN_MANAGER_IOC();
+    }
+    else if(PIE8bits.U2TXIE == 1 && PIR8bits.U2TXIF == 1)
+    {
+        UART2_TxInterruptHandler();
     }
     else if(PIE8bits.U2RXIE == 1 && PIR8bits.U2RXIF == 1)
     {

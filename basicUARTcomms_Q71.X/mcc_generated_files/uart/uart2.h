@@ -10,7 +10,7 @@
  * @version UART2 Driver Version 3.0.4
 */
 /*
-© [2023] Microchip Technology Inc. and its subsidiaries.
+© [2024] Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms, you may use Microchip 
     software and any derivatives exclusively with Microchip products. 
@@ -71,7 +71,7 @@
 #define UART2__AutoBaudEventEnableGet   (NULL)
 #define UART2_ErrorGet             UART2_ErrorGet
 
-#define UART2_TxCompleteCallbackRegister     (NULL)
+#define UART2_TxCompleteCallbackRegister     UART2_TxCompleteCallbackRegister
 #define UART2_RxCompleteCallbackRegister      UART2_RxCompleteCallbackRegister
 #define UART2_TxCollisionCallbackRegister  (NULL)
 #define UART2_FramingErrorCallbackRegister UART2_FramingErrorCallbackRegister
@@ -189,6 +189,22 @@ inline void UART2_SendBreakControlEnable(void);
  * @return None.
  */
 inline void UART2_SendBreakControlDisable(void);
+
+/**
+ * @ingroup uart2
+ * @brief This API enables the UART2 transmitter interrupt.
+ * @param None.
+ * @return None.
+ */
+inline void UART2_TransmitInterruptEnable(void);
+
+/**
+ * @ingroup uart2
+ * @brief This API disables the UART2 transmitter interrupt.
+ * @param None.
+ * @return None.
+ */
+inline void UART2_TransmitInterruptDisable(void);
 
 /**
  * @ingroup uart2
@@ -327,6 +343,31 @@ void UART2_OverrunErrorCallbackRegister(void (* callbackHandler)(void));
  * @return None.
  */
 void UART2_ParityErrorCallbackRegister(void (* callbackHandler)(void));
+
+/**
+ * @ingroup uart2
+ * @brief This is a pointer to the function that will be called upon transmit interrupt.
+ * @pre Initialize the UART2 module with transmit interrupt enabled
+ * @param None.
+ * @return None.
+ */
+void (*UART2_TxInterruptHandler)(void);
+
+/**
+ * @ingroup uart2
+ * @brief This API registers the function to be called upon Transmitter interrupt.
+ * @param callbackHandler - a function pointer which will be called upon Transmitter interrupt condition.
+ * @return None.
+ */
+void UART2_TxCompleteCallbackRegister(void (* callbackHandler)(void));
+
+/**
+ * @ingroup uart2
+ * @brief This function is a ISR function to be called upon Transmitter interrupt.
+ * @param void.
+ * @return None.
+ */
+void UART2_TransmitISR(void);
 
 /**
  * @ingroup uart2

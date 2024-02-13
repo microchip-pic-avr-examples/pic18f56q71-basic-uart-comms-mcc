@@ -11,7 +11,7 @@
 */
 
 /*
-© [2023] Microchip Technology Inc. and its subsidiaries.
+© [2024] Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms, you may use Microchip 
     software and any derivatives exclusively with Microchip products. 
@@ -40,6 +40,9 @@
   Section: Macro Declarations
 */
 
+#define UART2_TX_BUFFER_SIZE (8) //buffer size should be 2^n
+#define UART2_TX_BUFFER_MASK (UART2_TX_BUFFER_SIZE - 1) 
+
 #define UART2_RX_BUFFER_SIZE (8) //buffer size should be 2^n
 #define UART2_RX_BUFFER_MASK (UART2_RX_BUFFER_SIZE - 1)
 
@@ -65,7 +68,7 @@ const uart_drv_interface_t UART2 = {
     .BaudRateGet = NULL,
     .AutoBaudEventEnableGet = NULL,
     .ErrorGet = &UART2_ErrorGet,
-    .TxCompleteCallbackRegister = NULL,
+    .TxCompleteCallbackRegister = &UART2_TxCompleteCallbackRegister,
     .RxCompleteCallbackRegister = &UART2_RxCompleteCallbackRegister,
     .TxCollisionCallbackRegister = NULL,
     .FramingErrorCallbackRegister = &UART2_FramingErrorCallbackRegister,
@@ -77,6 +80,11 @@ const uart_drv_interface_t UART2 = {
 /**
   Section: UART2 variables
 */
+static volatile uint8_t uart2TxHead = 0;
+static volatile uint8_t uart2TxTail = 0;
+static volatile uint8_t uart2TxBuffer[UART2_TX_BUFFER_SIZE];
+volatile uint8_t uart2TxBufferRemaining;
+
 static volatile uint8_t uart2RxHead = 0;
 static volatile uint8_t uart2RxTail = 0;
 static volatile uint8_t uart2RxBuffer[UART2_RX_BUFFER_SIZE];
@@ -92,12 +100,15 @@ volatile uart2_status_t uart2RxLastError;
 void (*UART2_FramingErrorHandler)(void);
 void (*UART2_OverrunErrorHandler)(void);
 void (*UART2_ParityErrorHandler)(void);
+void (*UART2_TxInterruptHandler)(void);
+static void (*UART2_TxCompleteInterruptHandler)(void);
 void (*UART2_RxInterruptHandler)(void);
 static void (*UART2_RxCompleteInterruptHandler)(void);
 
 static void UART2_DefaultFramingErrorCallback(void);
 static void UART2_DefaultOverrunErrorCallback(void);
 static void UART2_DefaultParityErrorCallback(void);
+void UART2_TransmitISR (void);
 void UART2_ReceiveISR(void);
 
 /**
@@ -108,6 +119,8 @@ void UART2_Initialize(void)
 {
     PIE8bits.U2RXIE = 0;   
     UART2_RxInterruptHandler = UART2_ReceiveISR; 
+    PIE8bits.U2TXIE = 0; 
+    UART2_TxInterruptHandler = UART2_TransmitISR; 
 
     // Set the UART2 module to the options selected in the user interface.
 
@@ -132,10 +145,10 @@ void UART2_Initialize(void)
     //BRGH 0; 
     U2BRGH = 0x0; 
     //TXBE empty; STPMD in middle of first Stop bit; TXWRE No error; 
-    U2FIFO = 0x20; 
+    U2FIFO = 0x2E; 
     //ABDIE disabled; ABDIF Auto-baud not enabled or not complete; WUIF WUE not enabled by software; 
     U2UIR = 0x0; 
-    //TXCIF equal; RXFOIF not overflowed; RXBKIF No Break detected; FERIF no error; CERIF No Checksum error; ABDOVF Not overflowed; PERIF Byte not at top; TXMTIF empty; 
+    //TXCIF equal; RXFOIF not overflowed; RXBKIF No Break detected; FERIF no error; CERIF No Checksum error; ABDOVF Not overflowed; PERIF no parity error; TXMTIF empty; 
     U2ERRIR = 0x80; 
     //TXCIE disabled; RXFOIE disabled; RXBKIE disabled; FERIE disabled; CERIE disabled; ABDOVE disabled; PERIE disabled; TXMTIE disabled; 
     U2ERRIE = 0x0; 
@@ -145,6 +158,9 @@ void UART2_Initialize(void)
     UART2_ParityErrorCallbackRegister(UART2_DefaultParityErrorCallback);
 
     uart2RxLastError.status = 0;  
+    uart2TxHead = 0;
+    uart2TxTail = 0;
+    uart2TxBufferRemaining = sizeof(uart2TxBuffer);
     uart2RxHead = 0;
     uart2RxTail = 0;
     uart2RxCount = 0;
@@ -154,6 +170,7 @@ void UART2_Initialize(void)
 void UART2_Deinitialize(void)
 {
     PIE8bits.U2RXIE = 0;   
+    PIE8bits.U2TXIE = 0;
     U2RXB = 0x00;
     U2TXB = 0x00;
     U2P1L = 0x00;
@@ -243,6 +260,16 @@ inline void UART2_AutoBaudDetectOverflowReset(void)
     U2ERRIRbits.ABDOVF = 0; 
 }
 
+inline void UART2_TransmitInterruptEnable(void)
+{
+    PIE8bits.U2TXIE = 1;
+}
+
+inline void UART2_TransmitInterruptDisable(void)
+{ 
+    PIE8bits.U2TXIE = 0;
+}
+
 inline void UART2_ReceiveInterruptEnable(void)
 {
     PIE8bits.U2RXIE = 1;
@@ -259,7 +286,7 @@ bool UART2_IsRxReady(void)
 
 bool UART2_IsTxReady(void)
 {
-    return (bool)(U2FIFObits.TXBE && U2CON0bits.TXEN);
+    return (uart2TxBufferRemaining ? true : false);
 }
 
 bool UART2_IsTxDone(void)
@@ -291,6 +318,7 @@ uint8_t UART2_Read(void)
     return readValue;
 }
 
+
 void UART2_ReceiveISR(void)
 {
     uint8_t regValue;
@@ -314,6 +342,7 @@ void UART2_ReceiveISR(void)
             UART2_OverrunErrorHandler();
         }   
     }    
+ 
     regValue = U2RXB;
     if(regValue == 'T')LED_Toggle();
     
@@ -337,9 +366,50 @@ void UART2_ReceiveISR(void)
 
 void UART2_Write(uint8_t txData)
 {
+    uint8_t tempTxHead;
+    
+    if(0 == PIE8bits.U2TXIE)
+    {
     U2TXB = txData; 
 }
+    else if(uart2TxBufferRemaining) // check if at least one byte place is available in TX buffer
+    {
+       uart2TxBuffer[uart2TxHead] = txData;
+       tempTxHead = (uart2TxHead + 1) & UART2_TX_BUFFER_MASK;
 
+       uart2TxHead = tempTxHead;
+       PIE8bits.U2TXIE = 0; //Critical value decrement
+       uart2TxBufferRemaining--; // one less byte remaining in TX buffer
+    }
+    else
+    {
+        //overflow condition; uart2TxBufferRemaining is 0 means TX buffer is full
+    }
+    PIE8bits.U2TXIE = 1;
+}
+
+
+void UART2_TransmitISR(void)
+{
+    uint8_t tempTxTail;
+    // use this default transmit interrupt handler code
+    if(sizeof(uart2TxBuffer) > uart2TxBufferRemaining) // check if all data is transmitted
+    {
+       U2TXB = uart2TxBuffer[uart2TxTail];
+       tempTxTail = (uart2TxTail + 1) & UART2_TX_BUFFER_MASK;
+
+       uart2TxTail = tempTxTail;
+       uart2TxBufferRemaining++; // one byte sent, so 1 more byte place is available in TX buffer
+    }
+    else
+    {
+        PIE8bits.U2TXIE = 0;
+    }
+    if(UART2_TxCompleteInterruptHandler != NULL)
+    {
+        (*UART2_TxCompleteInterruptHandler)();
+    }
+}
 
 
 
@@ -388,6 +458,14 @@ void UART2_RxCompleteCallbackRegister(void (* callbackHandler)(void))
     if(NULL != callbackHandler)
     {
        UART2_RxCompleteInterruptHandler = callbackHandler; 
+    }   
+}
+
+void UART2_TxCompleteCallbackRegister(void (* callbackHandler)(void))
+{
+    if(NULL != callbackHandler)
+    {
+       UART2_TxCompleteInterruptHandler = callbackHandler;
     }   
 }
 

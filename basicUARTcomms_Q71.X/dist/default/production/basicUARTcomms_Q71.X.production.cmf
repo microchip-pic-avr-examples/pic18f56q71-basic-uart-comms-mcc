@@ -1,0 +1,832 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta> <reloc>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$dist/default/production\basicUARTcomms_Q71.X.production.o
+ivt0x8 CODE 0 8 8 12 1 2
+cinit CODE 0 1986 1986 20 1 2
+text0 CODE 0 1A22 1A22 E 1 2
+text1 CODE 0 1A10 1A10 12 1 2
+text2 CODE 0 17EA 17EA 96 1 2
+text3 CODE 0 19A6 19A6 1C 1 2
+text4 CODE 0 19C2 19C2 1C 1 2
+text5 CODE 0 19DE 19DE 1C 1 2
+text6 CODE 0 164E 164E F6 1 2
+text7 CODE 0 1A30 1A30 A 1 2
+text8 CODE 0 1900 1900 34 1 2
+text9 CODE 0 1A3A 1A3A A 1 2
+nvCOMRAM COMRAM 1 540 540 6 1 1
+text10 CODE 0 1A44 1A44 A 1 2
+text11 CODE 0 1A4E 1A4E A 1 2
+text12 CODE 0 1964 1964 22 1 2
+text13 CODE 0 1744 1744 A6 1 2
+text14 CODE 0 18CA 18CA 36 1 2
+text15 CODE 0 1532 1532 11C 1 2
+text16 CODE 0 1A60 1A60 2 1 2
+text17 CODE 0 1A62 1A62 2 1 2
+text18 CODE 0 19FA 19FA 16 1 2
+text19 CODE 0 1934 1934 30 1 2
+text20 CODE 0 1A58 1A58 8 1 2
+text21 CODE 0 1880 1880 4A 1 2
+cstackCOMRAM COMRAM 1 539 539 7 1 1
+smallconst SMALLCONST 0 1500 1500 32 1 2
+bssCOMRAM COMRAM 1 501 501 38 1 1
+config CONFIG 4 300000 300000 B 1 1
+$C:\Users\C65471\AppData\Local\Temp\xcAso90.\driver_tmp_9.o
+init CODE 0 1A 1A 4 1 2
+reset_vec CODE 0 0 0 4 1 2
+config CONFIG 4 300000 300000 B 1 1
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM 560-14FF 1
+SFR 0-4FF 1
+SFR 1500-15FF 1
+BANK5 560-5FF 1
+BANK6 600-6FF 1
+BANK7 700-7FF 1
+BANK8 800-8FF 1
+BANK9 900-9FF 1
+CONST 4-7 1
+CONST 1E-14FF 1
+CONST 1A64-FFFF 1
+IDLOC 200000-20003F 1
+SMALLCONST 1A64-FFFF 1
+CODE 4-7 1
+CODE 1E-14FF 1
+CODE 1A64-FFFF 1
+BANK10 A00-AFF 1
+BANK11 B00-BFF 1
+BANK12 C00-CFF 1
+BANK13 D00-DFF 1
+BANK14 E00-EFF 1
+BANK15 F00-FFF 1
+BANK16 1000-10FF 1
+BANK17 1100-11FF 1
+BANK18 1200-12FF 1
+BANK19 1300-13FF 1
+BANK20 1400-14FF 1
+BIGRAM 546-14FF 1
+BIGSFR 0-4FF 1
+BIGSFR 1500-15FF 1
+COMRAM 546-55F 1
+CONFIG 30000B-30000B 1
+EEDATA 380000-3800FF 1
+MEDIUMCONST 1A64-FFFF 1
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$dist/default/production\basicUARTcomms_Q71.X.production.o
+1880 text21 CODE >367:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/uart/src/uart2.c
+1882 text21 CODE >371:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/uart/src/uart2.c
+1890 text21 CODE >373:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/uart/src/uart2.c
+1894 text21 CODE >374:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/uart/src/uart2.c
+1898 text21 CODE >375:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/uart/src/uart2.c
+18A8 text21 CODE >377:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/uart/src/uart2.c
+18B8 text21 CODE >378:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/uart/src/uart2.c
+18BE text21 CODE >380:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/uart/src/uart2.c
+18C2 text21 CODE >381:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/uart/src/uart2.c
+18C4 text21 CODE >382:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/uart/src/uart2.c
+18C6 text21 CODE >387:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/uart/src/uart2.c
+18C6 text21 CODE >388:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/uart/src/uart2.c
+18C8 text21 CODE >389:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/uart/src/uart2.c
+1A58 text20 CODE >184:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/pins.c
+1A58 text20 CODE >187:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/pins.c
+1A5E text20 CODE >188:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/pins.c
+1934 text19 CODE >162:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/pins.c
+1934 text19 CODE >167:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/pins.c
+1946 text19 CODE >169:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/pins.c
+195E text19 CODE >171:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/pins.c
+1962 text19 CODE >172:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/pins.c
+19FA text18 CODE >150:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/pins.c
+19FA text18 CODE >153:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/pins.c
+1A0A text18 CODE >155:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/pins.c
+1A0E text18 CODE >157:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/pins.c
+1A62 text17 CODE >418:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/uart/src/uart2.c
+1A62 text17 CODE >421:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/uart/src/uart2.c
+1A60 text16 CODE >423:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/uart/src/uart2.c
+1A60 text16 CODE >426:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/uart/src/uart2.c
+1532 text15 CODE >322:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/uart/src/uart2.c
+1532 text15 CODE >327:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/uart/src/uart2.c
+1546 text15 CODE >329:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/uart/src/uart2.c
+1556 text15 CODE >331:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/uart/src/uart2.c
+1568 text15 CODE >332:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/uart/src/uart2.c
+157A text15 CODE >334:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/uart/src/uart2.c
+1592 text15 CODE >337:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/uart/src/uart2.c
+15A2 text15 CODE >339:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/uart/src/uart2.c
+15B4 text15 CODE >340:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/uart/src/uart2.c
+15C6 text15 CODE >342:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/uart/src/uart2.c
+15DE text15 CODE >346:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/uart/src/uart2.c
+15E2 text15 CODE >347:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/uart/src/uart2.c
+161A text15 CODE >349:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/uart/src/uart2.c
+1620 text15 CODE >350:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/uart/src/uart2.c
+1636 text15 CODE >356:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/uart/src/uart2.c
+1646 text15 CODE >357:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/uart/src/uart2.c
+164A text15 CODE >358:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/uart/src/uart2.c
+164C text15 CODE >365:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/uart/src/uart2.c
+18CA text14 CODE >392:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/uart/src/uart2.c
+18CA text14 CODE >396:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/uart/src/uart2.c
+18DA text14 CODE >398:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/uart/src/uart2.c
+18EC text14 CODE >399:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/uart/src/uart2.c
+18F2 text14 CODE >401:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/uart/src/uart2.c
+18F6 text14 CODE >402:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/uart/src/uart2.c
+18F8 text14 CODE >403:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/uart/src/uart2.c
+18FC text14 CODE >404:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/uart/src/uart2.c
+18FC text14 CODE >406:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/uart/src/uart2.c
+18FE text14 CODE >412:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/uart/src/uart2.c
+1744 text13 CODE >80:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/interrupt.c
+174C text13 CODE >83:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/interrupt.c
+1768 text13 CODE >85:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/interrupt.c
+176C text13 CODE >86:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/interrupt.c
+1770 text13 CODE >87:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/interrupt.c
+178C text13 CODE >89:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/interrupt.c
+17A4 text13 CODE >90:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/interrupt.c
+17A8 text13 CODE >91:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/interrupt.c
+17C4 text13 CODE >93:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/interrupt.c
+17DC text13 CODE >94:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/interrupt.c
+17E0 text13 CODE >98:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/interrupt.c
+17E0 text13 CODE >99:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/interrupt.c
+1964 text12 CODE >37:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/clock.c
+1964 text12 CODE >41:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/clock.c
+196A text12 CODE >43:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/clock.c
+196E text12 CODE >45:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/clock.c
+1972 text12 CODE >47:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/clock.c
+1976 text12 CODE >49:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/clock.c
+197A text12 CODE >51:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/clock.c
+197E text12 CODE >53:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/clock.c
+1984 text12 CODE >55:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/clock.c
+1A4E text11 CODE >119:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/interrupt.c
+1A4E text11 CODE >120:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/interrupt.c
+1A56 text11 CODE >121:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/interrupt.c
+1A44 text10 CODE >145:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/interrupt.c
+1A44 text10 CODE >146:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/interrupt.c
+1A4C text10 CODE >147:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/interrupt.c
+1A3A text9 CODE >171:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/interrupt.c
+1A3A text9 CODE >172:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/interrupt.c
+1A42 text9 CODE >173:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/interrupt.c
+1900 text8 CODE >42:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/interrupt.c
+1900 text8 CODE >45:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/interrupt.c
+1902 text8 CODE >49:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/interrupt.c
+1904 text8 CODE >50:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/interrupt.c
+1906 text8 CODE >52:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/interrupt.c
+1912 text8 CODE >57:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/interrupt.c
+1914 text8 CODE >58:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/interrupt.c
+1916 text8 CODE >60:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/interrupt.c
+1922 text8 CODE >65:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/interrupt.c
+1924 text8 CODE >66:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/interrupt.c
+1926 text8 CODE >68:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/interrupt.c
+1932 text8 CODE >71:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/interrupt.c
+1A30 text7 CODE >177:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/pins.c
+1A30 text7 CODE >178:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/pins.c
+1A38 text7 CODE >179:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/pins.c
+164E text6 CODE >40:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/pins.c
+164E text6 CODE >45:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/pins.c
+1654 text6 CODE >46:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/pins.c
+1658 text6 CODE >47:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/pins.c
+165C text6 CODE >48:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/pins.c
+1660 text6 CODE >49:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/pins.c
+1664 text6 CODE >50:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/pins.c
+1668 text6 CODE >55:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/pins.c
+166A text6 CODE >56:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/pins.c
+166E text6 CODE >57:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/pins.c
+1672 text6 CODE >58:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/pins.c
+1674 text6 CODE >59:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/pins.c
+1678 text6 CODE >60:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/pins.c
+167A text6 CODE >65:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/pins.c
+1680 text6 CODE >66:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/pins.c
+1684 text6 CODE >67:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/pins.c
+1688 text6 CODE >68:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/pins.c
+168A text6 CODE >69:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/pins.c
+168E text6 CODE >70:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/pins.c
+1690 text6 CODE >75:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/pins.c
+1694 text6 CODE >76:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/pins.c
+1698 text6 CODE >77:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/pins.c
+169C text6 CODE >78:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/pins.c
+16A0 text6 CODE >79:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/pins.c
+16A4 text6 CODE >80:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/pins.c
+16A8 text6 CODE >85:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/pins.c
+16AC text6 CODE >86:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/pins.c
+16B0 text6 CODE >87:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/pins.c
+16B4 text6 CODE >88:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/pins.c
+16B8 text6 CODE >89:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/pins.c
+16BC text6 CODE >90:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/pins.c
+16C0 text6 CODE >95:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/pins.c
+16C2 text6 CODE >96:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/pins.c
+16C4 text6 CODE >97:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/pins.c
+16C6 text6 CODE >98:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/pins.c
+16C8 text6 CODE >99:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/pins.c
+16CC text6 CODE >100:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/pins.c
+16CE text6 CODE >105:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/pins.c
+16D0 text6 CODE >106:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/pins.c
+16D2 text6 CODE >107:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/pins.c
+16D4 text6 CODE >108:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/pins.c
+16D6 text6 CODE >109:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/pins.c
+16DA text6 CODE >110:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/pins.c
+16DC text6 CODE >115:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/pins.c
+16E2 text6 CODE >116:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/pins.c
+16E6 text6 CODE >117:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/pins.c
+16EA text6 CODE >118:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/pins.c
+16EE text6 CODE >122:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/pins.c
+16F2 text6 CODE >123:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/pins.c
+16F6 text6 CODE >128:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/pins.c
+16FC text6 CODE >129:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/pins.c
+1700 text6 CODE >130:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/pins.c
+1704 text6 CODE >131:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/pins.c
+1708 text6 CODE >132:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/pins.c
+170C text6 CODE >133:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/pins.c
+1710 text6 CODE >134:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/pins.c
+1714 text6 CODE >135:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/pins.c
+1718 text6 CODE >136:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/pins.c
+171C text6 CODE >137:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/pins.c
+1720 text6 CODE >138:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/pins.c
+1724 text6 CODE >139:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/pins.c
+1728 text6 CODE >140:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/pins.c
+172C text6 CODE >141:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/pins.c
+1730 text6 CODE >142:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/pins.c
+1734 text6 CODE >144:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/pins.c
+1740 text6 CODE >147:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/pins.c
+1742 text6 CODE >148:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/pins.c
+19DE text5 CODE >433:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/uart/src/uart2.c
+19DE text5 CODE >435:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/uart/src/uart2.c
+19F0 text5 CODE >437:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/uart/src/uart2.c
+19F8 text5 CODE >439:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/uart/src/uart2.c
+19C2 text4 CODE >441:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/uart/src/uart2.c
+19C2 text4 CODE >443:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/uart/src/uart2.c
+19D4 text4 CODE >445:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/uart/src/uart2.c
+19DC text4 CODE >447:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/uart/src/uart2.c
+19A6 text3 CODE >449:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/uart/src/uart2.c
+19A6 text3 CODE >451:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/uart/src/uart2.c
+19B8 text3 CODE >453:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/uart/src/uart2.c
+19C0 text3 CODE >455:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/uart/src/uart2.c
+17EA text2 CODE >118:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/uart/src/uart2.c
+17EA text2 CODE >120:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/uart/src/uart2.c
+17EC text2 CODE >121:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/uart/src/uart2.c
+17F4 text2 CODE >122:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/uart/src/uart2.c
+17F6 text2 CODE >123:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/uart/src/uart2.c
+17FE text2 CODE >128:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/uart/src/uart2.c
+1804 text2 CODE >130:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/uart/src/uart2.c
+1808 text2 CODE >132:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/uart/src/uart2.c
+180C text2 CODE >134:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/uart/src/uart2.c
+1810 text2 CODE >136:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/uart/src/uart2.c
+1814 text2 CODE >138:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/uart/src/uart2.c
+1818 text2 CODE >140:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/uart/src/uart2.c
+181C text2 CODE >142:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/uart/src/uart2.c
+1820 text2 CODE >144:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/uart/src/uart2.c
+1824 text2 CODE >146:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/uart/src/uart2.c
+1828 text2 CODE >148:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/uart/src/uart2.c
+182C text2 CODE >150:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/uart/src/uart2.c
+1830 text2 CODE >152:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/uart/src/uart2.c
+1834 text2 CODE >154:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/uart/src/uart2.c
+1838 text2 CODE >156:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/uart/src/uart2.c
+1844 text2 CODE >157:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/uart/src/uart2.c
+1850 text2 CODE >158:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/uart/src/uart2.c
+185C text2 CODE >160:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/uart/src/uart2.c
+1864 text2 CODE >161:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/uart/src/uart2.c
+1868 text2 CODE >162:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/uart/src/uart2.c
+186C text2 CODE >163:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/uart/src/uart2.c
+1870 text2 CODE >164:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/uart/src/uart2.c
+1874 text2 CODE >165:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/uart/src/uart2.c
+1878 text2 CODE >166:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/uart/src/uart2.c
+187C text2 CODE >167:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/uart/src/uart2.c
+187E text2 CODE >168:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/uart/src/uart2.c
+1A10 text1 CODE >36:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/system.c
+1A10 text1 CODE >38:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/system.c
+1A14 text1 CODE >39:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/system.c
+1A18 text1 CODE >40:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/system.c
+1A1C text1 CODE >41:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/system.c
+1A20 text1 CODE >42:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\mcc_generated_files/system/src/system.c
+1A22 text0 CODE >39:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\main.c
+1A22 text0 CODE >41:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\main.c
+1A26 text0 CODE >48:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\main.c
+1A28 text0 CODE >54:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\main.c
+1A28 text0 CODE >56:C:\VS_Code_Projects\pic18f56q71-basic-uart-comms-mcc\basicUARTcomms_Q71.X\main.c
+1986 cinit CODE >10010:C:\Users\C65471\AppData\Local\Temp\xcAso90.\driver_tmp_1.s
+1986 cinit CODE >10012:C:\Users\C65471\AppData\Local\Temp\xcAso90.\driver_tmp_1.s
+1986 cinit CODE >10015:C:\Users\C65471\AppData\Local\Temp\xcAso90.\driver_tmp_1.s
+1986 cinit CODE >10069:C:\Users\C65471\AppData\Local\Temp\xcAso90.\driver_tmp_1.s
+198A cinit CODE >10070:C:\Users\C65471\AppData\Local\Temp\xcAso90.\driver_tmp_1.s
+198C cinit CODE >10071:C:\Users\C65471\AppData\Local\Temp\xcAso90.\driver_tmp_1.s
+198C cinit CODE >10072:C:\Users\C65471\AppData\Local\Temp\xcAso90.\driver_tmp_1.s
+198E cinit CODE >10073:C:\Users\C65471\AppData\Local\Temp\xcAso90.\driver_tmp_1.s
+1990 cinit CODE >10074:C:\Users\C65471\AppData\Local\Temp\xcAso90.\driver_tmp_1.s
+1992 cinit CODE >10082:C:\Users\C65471\AppData\Local\Temp\xcAso90.\driver_tmp_1.s
+1994 cinit CODE >10083:C:\Users\C65471\AppData\Local\Temp\xcAso90.\driver_tmp_1.s
+1996 cinit CODE >10084:C:\Users\C65471\AppData\Local\Temp\xcAso90.\driver_tmp_1.s
+1998 cinit CODE >10085:C:\Users\C65471\AppData\Local\Temp\xcAso90.\driver_tmp_1.s
+199A cinit CODE >10086:C:\Users\C65471\AppData\Local\Temp\xcAso90.\driver_tmp_1.s
+199C cinit CODE >10087:C:\Users\C65471\AppData\Local\Temp\xcAso90.\driver_tmp_1.s
+199E cinit CODE >10088:C:\Users\C65471\AppData\Local\Temp\xcAso90.\driver_tmp_1.s
+19A0 cinit CODE >10094:C:\Users\C65471\AppData\Local\Temp\xcAso90.\driver_tmp_1.s
+19A0 cinit CODE >10096:C:\Users\C65471\AppData\Local\Temp\xcAso90.\driver_tmp_1.s
+19A2 cinit CODE >10097:C:\Users\C65471\AppData\Local\Temp\xcAso90.\driver_tmp_1.s
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+__Lmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/production\basicUARTcomms_Q71.X.production.o
+__Hspace_0 1A64 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+__Hspace_1 546 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+__Hspace_2 0 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+__Hspace_4 60000B 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+UART2_Write@tempTxHead 539 0 COMRAM 1 cstackCOMRAM dist/default/production\basicUARTcomms_Q71.X.production.o
+__Hibigdata 0 0 CODE 0 ibigdata dist/default/production\basicUARTcomms_Q71.X.production.o
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\C65471\AppData\Local\Temp\xcAso90.\driver_tmp_9.o
+_INT0_DefaultInterruptHandler 0 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+__Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\basicUARTcomms_Q71.X.production.o
+__end_of_INTERRUPT_Initialize 1934 0 CODE 0 text8 dist/default/production\basicUARTcomms_Q71.X.production.o
+_UART2_ParityErrorCallbackRegister 19A6 0 CODE 0 text3 dist/default/production\basicUARTcomms_Q71.X.production.o
+__end_of_PIN_MANAGER_IOC 1A10 0 CODE 0 text18 dist/default/production\basicUARTcomms_Q71.X.production.o
+__L__absolute__ 0 0 ABS 0 __absolute__ dist/default/production\basicUARTcomms_Q71.X.production.o
+__end_of_UART2_FramingErrorCallbackRegister 19FA 0 CODE 0 text5 dist/default/production\basicUARTcomms_Q71.X.production.o
+UART2_ReceiveISR@tempRxHead 53B 0 COMRAM 1 cstackCOMRAM dist/default/production\basicUARTcomms_Q71.X.production.o
+__Lsmallconst 1500 0 SMALLCONST 0 smallconst dist/default/production\basicUARTcomms_Q71.X.production.o
+_UART2_TransmitEnable 0 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_LATA 140 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_LATB 141 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_LATC 142 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_LATD 143 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_LATE 144 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_LATF 145 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_WPUA 401 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_WPUB 409 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_WPUC 411 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_WPUD 419 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_WPUE 421 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_WPUF 429 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+___sp 0 0 STACK 2 stack C:\Users\C65471\AppData\Local\Temp\xcAso90.\driver_tmp_9.o
+_main 1A22 0 CODE 0 text0 dist/default/production\basicUARTcomms_Q71.X.production.o
+___stack_hi 0 0 STACK 2 stack C:\Users\C65471\AppData\Local\Temp\xcAso90.\driver_tmp_9.o
+___stack_lo 0 0 STACK 2 stack C:\Users\C65471\AppData\Local\Temp\xcAso90.\driver_tmp_9.o
+start 1A 0 CODE 0 init C:\Users\C65471\AppData\Local\Temp\xcAso90.\driver_tmp_9.o
+SW0_SetInterruptHandler@InterruptHandler 53E 0 COMRAM 1 cstackCOMRAM dist/default/production\basicUARTcomms_Q71.X.production.o
+_uart2TxBuffer 519 0 COMRAM 1 bssCOMRAM dist/default/production\basicUARTcomms_Q71.X.production.o
+__HbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\basicUARTcomms_Q71.X.production.o
+INT2_SetInterruptHandler@InterruptHandler 53E 0 COMRAM 1 cstackCOMRAM dist/default/production\basicUARTcomms_Q71.X.production.o
+_UART2_FramingErrorHandler 529 0 COMRAM 1 bssCOMRAM dist/default/production\basicUARTcomms_Q71.X.production.o
+_UART2_OverrunErrorHandler 527 0 COMRAM 1 bssCOMRAM dist/default/production\basicUARTcomms_Q71.X.production.o
+_INT2_SetInterruptHandler 1A3A 0 CODE 0 text9 dist/default/production\basicUARTcomms_Q71.X.production.o
+_UART2_RxCompleteCallbackRegister 0 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+UART2_TransmitISR@tempTxTail 539 0 COMRAM 1 cstackCOMRAM dist/default/production\basicUARTcomms_Q71.X.production.o
+__Hpowerup 0 0 CODE 0 powerup dist/default/production\basicUARTcomms_Q71.X.production.o
+__LnvCOMRAM 0 0 ABS 0 nvCOMRAM dist/default/production\basicUARTcomms_Q71.X.production.o
+__accesstop 560 0 ABS 0 - C:\Users\C65471\AppData\Local\Temp\xcAso90.\driver_tmp_9.o
+intlevel0 0 0 CODE 0 text C:\Users\C65471\AppData\Local\Temp\xcAso90.\driver_tmp_9.o
+intlevel1 0 0 CODE 0 text C:\Users\C65471\AppData\Local\Temp\xcAso90.\driver_tmp_9.o
+intlevel2 0 0 CODE 0 text C:\Users\C65471\AppData\Local\Temp\xcAso90.\driver_tmp_9.o
+intlevel3 0 0 CODE 0 text C:\Users\C65471\AppData\Local\Temp\xcAso90.\driver_tmp_9.o
+__LbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\basicUARTcomms_Q71.X.production.o
+__LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\basicUARTcomms_Q71.X.production.o
+_PIN_MANAGER_IOC 19FA 0 CODE 0 text18 dist/default/production\basicUARTcomms_Q71.X.production.o
+__Hifardata 0 0 CODE 0 ifardata dist/default/production\basicUARTcomms_Q71.X.production.o
+__Hclrtext 0 0 ABS 0 clrtext dist/default/production\basicUARTcomms_Q71.X.production.o
+__end_of_INT1_SetInterruptHandler 1A4E 0 CODE 0 text10 dist/default/production\basicUARTcomms_Q71.X.production.o
+__end_of_SW0_DefaultInterruptHandler 1A60 0 CODE 0 text20 dist/default/production\basicUARTcomms_Q71.X.production.o
+ivt0x8_base 8 0 CODE 0 ivt0x8 dist/default/production\basicUARTcomms_Q71.X.production.o
+_U2ERRIE 2C6 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_U2ERRIR 2C5 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_ACTCON AC 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_U2RXPPS 274 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_ANSELA 400 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_ANSELB 408 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_ANSELC 410 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_ANSELD 418 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_ANSELE 420 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_ANSELF 428 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+___inthi_sp 0 0 STACK 2 stack C:\Users\C65471\AppData\Local\Temp\xcAso90.\driver_tmp_9.o
+___intlo_sp 0 0 STACK 2 stack C:\Users\C65471\AppData\Local\Temp\xcAso90.\driver_tmp_9.o
+_UART2_DefaultParityErrorCallback 0 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_SW0_SetInterruptHandler 1A30 0 CODE 0 text7 dist/default/production\basicUARTcomms_Q71.X.production.o
+__end_of_INTERRUPT_InterruptManager 17EA 0 CODE 0 text13 dist/default/production\basicUARTcomms_Q71.X.production.o
+_UART2_IsTxDone 0 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_uart2RxBuffer 511 0 COMRAM 1 bssCOMRAM dist/default/production\basicUARTcomms_Q71.X.production.o
+__end_of_SW0_SetInterruptHandler 1A3A 0 CODE 0 text7 dist/default/production\basicUARTcomms_Q71.X.production.o
+__Lintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production\basicUARTcomms_Q71.X.production.o
+UART2_Write@txData 53A 0 COMRAM 1 cstackCOMRAM dist/default/production\basicUARTcomms_Q71.X.production.o
+__Hmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/production\basicUARTcomms_Q71.X.production.o
+_uart2RxStatusBuffer 501 0 COMRAM 1 bssCOMRAM dist/default/production\basicUARTcomms_Q71.X.production.o
+__end_of_UART2_ParityErrorCallbackRegister 19C2 0 CODE 0 text3 dist/default/production\basicUARTcomms_Q71.X.production.o
+_INLVLA 404 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_INLVLB 40C 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_INLVLC 414 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_INLVLD 41C 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_INLVLE 424 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_INLVLF 42C 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_uart2RxCount 533 0 COMRAM 1 bssCOMRAM dist/default/production\basicUARTcomms_Q71.X.production.o
+_UART2_IsTxReady 0 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_SW0_InterruptHandler 540 0 COMRAM 1 nvCOMRAM dist/default/production\basicUARTcomms_Q71.X.production.o
+__HnvCOMRAM 0 0 ABS 0 nvCOMRAM dist/default/production\basicUARTcomms_Q71.X.production.o
+_INTCON0bits 4D6 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_PIN_MANAGER_Initialize 164E 0 CODE 0 text6 dist/default/production\basicUARTcomms_Q71.X.production.o
+start_initialization 1986 0 CODE 0 cinit dist/default/production\basicUARTcomms_Q71.X.production.o
+_ODCONA 402 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_ODCONB 40A 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_ODCONC 412 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_ODCOND 41A 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_ODCONE 422 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_ODCONF 42A 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_OSCFRQ B1 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+__HnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\basicUARTcomms_Q71.X.production.o
+_UART2_DefaultFramingErrorCallback 1A62 0 CODE 0 text17 dist/default/production\basicUARTcomms_Q71.X.production.o
+___rparam_used 1 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_RB1I2C 286 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_RB2I2C 285 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_RB4PPS 20D 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_RC3I2C 288 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_RC4I2C 287 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+__end_of_SYSTEM_Initialize 1A22 0 CODE 0 text1 dist/default/production\basicUARTcomms_Q71.X.production.o
+_U2BRGH 2C2 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_U2BRGL 2C1 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_U2CON0 2BE 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_U2CON1 2BF 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_U2CON2 2C0 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_U2FIFO 2C3 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_UART2_TxInterruptHandler 544 0 COMRAM 1 nvCOMRAM dist/default/production\basicUARTcomms_Q71.X.production.o
+_INT2_DefaultInterruptHandler 0 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+isa$xinst 0 0 ABS 0 - C:\Users\C65471\AppData\Local\Temp\xcAso90.\driver_tmp_9.o
+_UART2_DefaultOverrunErrorCallback 1A60 0 CODE 0 text16 dist/default/production\basicUARTcomms_Q71.X.production.o
+UART2_ParityErrorCallbackRegister@callbackHandler 53E 0 COMRAM 1 cstackCOMRAM dist/default/production\basicUARTcomms_Q71.X.production.o
+__Hbank5 0 0 ABS 0 bank5 dist/default/production\basicUARTcomms_Q71.X.production.o
+__Hbank6 0 0 ABS 0 bank6 dist/default/production\basicUARTcomms_Q71.X.production.o
+__Hbank7 0 0 ABS 0 bank7 dist/default/production\basicUARTcomms_Q71.X.production.o
+__Hbank8 0 0 ABS 0 bank8 dist/default/production\basicUARTcomms_Q71.X.production.o
+__Hbank9 0 0 ABS 0 bank9 dist/default/production\basicUARTcomms_Q71.X.production.o
+__Hcinit 0 0 ABS 0 cinit dist/default/production\basicUARTcomms_Q71.X.production.o
+__Hconst 0 0 CONST 0 const dist/default/production\basicUARTcomms_Q71.X.production.o
+__Hidata 0 0 CODE 0 idata dist/default/production\basicUARTcomms_Q71.X.production.o
+__Hidloc 0 0 ABS 0 idloc dist/default/production\basicUARTcomms_Q71.X.production.o
+__Hnvbit 0 0 COMRAM 1 nvbit dist/default/production\basicUARTcomms_Q71.X.production.o
+__Hparam 0 0 COMRAM 1 rparam dist/default/production\basicUARTcomms_Q71.X.production.o
+__Hrdata 0 0 COMRAM 1 rdata dist/default/production\basicUARTcomms_Q71.X.production.o
+__Hstack 0 0 STACK 2 stack dist/default/production\basicUARTcomms_Q71.X.production.o
+__Htext0 0 0 ABS 0 text0 dist/default/production\basicUARTcomms_Q71.X.production.o
+__Htext1 0 0 ABS 0 text1 dist/default/production\basicUARTcomms_Q71.X.production.o
+__Htext2 0 0 ABS 0 text2 dist/default/production\basicUARTcomms_Q71.X.production.o
+__Htext3 0 0 ABS 0 text3 dist/default/production\basicUARTcomms_Q71.X.production.o
+__Htext4 0 0 ABS 0 text4 dist/default/production\basicUARTcomms_Q71.X.production.o
+__Htext5 0 0 ABS 0 text5 dist/default/production\basicUARTcomms_Q71.X.production.o
+__Htext6 0 0 ABS 0 text6 dist/default/production\basicUARTcomms_Q71.X.production.o
+__Htext7 0 0 ABS 0 text7 dist/default/production\basicUARTcomms_Q71.X.production.o
+__Htext8 0 0 ABS 0 text8 dist/default/production\basicUARTcomms_Q71.X.production.o
+__Htext9 0 0 ABS 0 text9 dist/default/production\basicUARTcomms_Q71.X.production.o
+__Hbank10 0 0 ABS 0 bank10 dist/default/production\basicUARTcomms_Q71.X.production.o
+__Hbank11 0 0 ABS 0 bank11 dist/default/production\basicUARTcomms_Q71.X.production.o
+__Hbank12 0 0 ABS 0 bank12 dist/default/production\basicUARTcomms_Q71.X.production.o
+__Hbank13 0 0 ABS 0 bank13 dist/default/production\basicUARTcomms_Q71.X.production.o
+__Hbank14 0 0 ABS 0 bank14 dist/default/production\basicUARTcomms_Q71.X.production.o
+__Hbank15 0 0 ABS 0 bank15 dist/default/production\basicUARTcomms_Q71.X.production.o
+__Hbank16 0 0 ABS 0 bank16 dist/default/production\basicUARTcomms_Q71.X.production.o
+__Hbank17 0 0 ABS 0 bank17 dist/default/production\basicUARTcomms_Q71.X.production.o
+__Hbank18 0 0 ABS 0 bank18 dist/default/production\basicUARTcomms_Q71.X.production.o
+__Hbank19 0 0 ABS 0 bank19 dist/default/production\basicUARTcomms_Q71.X.production.o
+__Hbank20 0 0 ABS 0 bank20 dist/default/production\basicUARTcomms_Q71.X.production.o
+__Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production\basicUARTcomms_Q71.X.production.o
+__Hbigram 0 0 ABS 0 bigram dist/default/production\basicUARTcomms_Q71.X.production.o
+__Hbigsfr 0 0 ABS 0 bigsfr dist/default/production\basicUARTcomms_Q71.X.production.o
+__smallconst 1500 0 SMALLCONST 0 smallconst C:\Users\C65471\AppData\Local\Temp\xcAso90.\driver_tmp_9.o
+__Hcomram 0 0 ABS 0 comram dist/default/production\basicUARTcomms_Q71.X.production.o
+__Hconfig 30000B 0 CONFIG 4 config dist/default/production\basicUARTcomms_Q71.X.production.o
+_UART2_RxCompleteInterruptHandler 521 0 COMRAM 1 bssCOMRAM dist/default/production\basicUARTcomms_Q71.X.production.o
+__Lbank5 0 0 ABS 0 bank5 dist/default/production\basicUARTcomms_Q71.X.production.o
+__Lbank6 0 0 ABS 0 bank6 dist/default/production\basicUARTcomms_Q71.X.production.o
+__Lbank7 0 0 ABS 0 bank7 dist/default/production\basicUARTcomms_Q71.X.production.o
+__Lbank8 0 0 ABS 0 bank8 dist/default/production\basicUARTcomms_Q71.X.production.o
+__Lbank9 0 0 ABS 0 bank9 dist/default/production\basicUARTcomms_Q71.X.production.o
+__Lcinit 0 0 ABS 0 cinit dist/default/production\basicUARTcomms_Q71.X.production.o
+__Lconst 0 0 CONST 0 const dist/default/production\basicUARTcomms_Q71.X.production.o
+__Lidata 0 0 CODE 0 idata dist/default/production\basicUARTcomms_Q71.X.production.o
+__Lidloc 0 0 ABS 0 idloc dist/default/production\basicUARTcomms_Q71.X.production.o
+__Lnvbit 0 0 COMRAM 1 nvbit dist/default/production\basicUARTcomms_Q71.X.production.o
+INT1_SetInterruptHandler@InterruptHandler 53E 0 COMRAM 1 cstackCOMRAM dist/default/production\basicUARTcomms_Q71.X.production.o
+__Lparam 0 0 COMRAM 1 rparam dist/default/production\basicUARTcomms_Q71.X.production.o
+__Lrdata 0 0 COMRAM 1 rdata dist/default/production\basicUARTcomms_Q71.X.production.o
+__Lstack 0 0 STACK 2 stack dist/default/production\basicUARTcomms_Q71.X.production.o
+__Ltext0 0 0 ABS 0 text0 dist/default/production\basicUARTcomms_Q71.X.production.o
+__Ltext1 0 0 ABS 0 text1 dist/default/production\basicUARTcomms_Q71.X.production.o
+__Ltext2 0 0 ABS 0 text2 dist/default/production\basicUARTcomms_Q71.X.production.o
+__Ltext3 0 0 ABS 0 text3 dist/default/production\basicUARTcomms_Q71.X.production.o
+__Ltext4 0 0 ABS 0 text4 dist/default/production\basicUARTcomms_Q71.X.production.o
+__Ltext5 0 0 ABS 0 text5 dist/default/production\basicUARTcomms_Q71.X.production.o
+__Ltext6 0 0 ABS 0 text6 dist/default/production\basicUARTcomms_Q71.X.production.o
+__Ltext7 0 0 ABS 0 text7 dist/default/production\basicUARTcomms_Q71.X.production.o
+__Ltext8 0 0 ABS 0 text8 dist/default/production\basicUARTcomms_Q71.X.production.o
+__Ltext9 0 0 ABS 0 text9 dist/default/production\basicUARTcomms_Q71.X.production.o
+_INT0_SetInterruptHandler 1A4E 0 CODE 0 text11 dist/default/production\basicUARTcomms_Q71.X.production.o
+__Hfarbss 0 0 FARRAM 0 farbss dist/default/production\basicUARTcomms_Q71.X.production.o
+_INTERRUPT_Initialize 1900 0 CODE 0 text8 dist/default/production\basicUARTcomms_Q71.X.production.o
+__Habs1 0 0 ABS 0 abs1 dist/default/production\basicUARTcomms_Q71.X.production.o
+__Hdata 0 0 ABS 0 data dist/default/production\basicUARTcomms_Q71.X.production.o
+__Hheap 0 0 HEAP 7 heap dist/default/production\basicUARTcomms_Q71.X.production.o
+__Hinit 1E 0 CODE 0 init dist/default/production\basicUARTcomms_Q71.X.production.o
+__Hrbit 0 0 COMRAM 1 rbit dist/default/production\basicUARTcomms_Q71.X.production.o
+__Hrbss 0 0 COMRAM 1 rbss dist/default/production\basicUARTcomms_Q71.X.production.o
+__Htemp 0 0 COMRAM 1 temp dist/default/production\basicUARTcomms_Q71.X.production.o
+__Htext 0 0 ABS 0 text dist/default/production\basicUARTcomms_Q71.X.production.o
+__Labs1 0 0 ABS 0 abs1 dist/default/production\basicUARTcomms_Q71.X.production.o
+__Ldata 0 0 ABS 0 data dist/default/production\basicUARTcomms_Q71.X.production.o
+__Lheap 0 0 HEAP 7 heap dist/default/production\basicUARTcomms_Q71.X.production.o
+__Linit 1A 0 CODE 0 init dist/default/production\basicUARTcomms_Q71.X.production.o
+__Lrbit 0 0 COMRAM 1 rbit dist/default/production\basicUARTcomms_Q71.X.production.o
+__Lrbss 0 0 COMRAM 1 rbss dist/default/production\basicUARTcomms_Q71.X.production.o
+__Ltemp 0 0 COMRAM 1 temp dist/default/production\basicUARTcomms_Q71.X.production.o
+__Ltext 0 0 ABS 0 text dist/default/production\basicUARTcomms_Q71.X.production.o
+_UART2_TxCompleteCallbackRegister 0 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_UART2_ParityErrorHandler 525 0 COMRAM 1 bssCOMRAM dist/default/production\basicUARTcomms_Q71.X.production.o
+__HcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production\basicUARTcomms_Q71.X.production.o
+__Hirdata 0 0 CODE 0 irdata dist/default/production\basicUARTcomms_Q71.X.production.o
+__S0 1A64 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+__S1 546 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+__S4 0 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+__S5 0 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+__Hivt0x8 1A 0 CODE 0 ivt0x8 dist/default/production\basicUARTcomms_Q71.X.production.o
+_CLOCK_Initialize 1964 0 CODE 0 text12 dist/default/production\basicUARTcomms_Q71.X.production.o
+__end_of_INT2_SetInterruptHandler 1A44 0 CODE 0 text9 dist/default/production\basicUARTcomms_Q71.X.production.o
+IVTBASEH 45E 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+IVTBASEL 45D 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+IVTBASEU 45F 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_UART2_ErrorGet 0 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+__pnvCOMRAM 540 0 COMRAM 1 nvCOMRAM dist/default/production\basicUARTcomms_Q71.X.production.o
+_UART2_RxInterruptHandler 542 0 COMRAM 1 nvCOMRAM dist/default/production\basicUARTcomms_Q71.X.production.o
+__pivt0x8 8 0 CODE 0 ivt0x8 dist/default/production\basicUARTcomms_Q71.X.production.o
+_UART2_Initialize 17EA 0 CODE 0 text2 dist/default/production\basicUARTcomms_Q71.X.production.o
+_UART2_ReceiveISR 1532 0 CODE 0 text15 dist/default/production\basicUARTcomms_Q71.X.production.o
+__Lbigdata 0 0 BIGRAM 1 bigdata dist/default/production\basicUARTcomms_Q71.X.production.o
+__Hnvrram 0 0 COMRAM 1 nvrram dist/default/production\basicUARTcomms_Q71.X.production.o
+_SYSTEM_Initialize 1A10 0 CODE 0 text1 dist/default/production\basicUARTcomms_Q71.X.production.o
+__end_of_SW0_ISR 1964 0 CODE 0 text19 dist/default/production\basicUARTcomms_Q71.X.production.o
+_UART2_TransmitDisable 0 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+__end_of_UART2_DefaultFramingErrorCallback 1A64 0 CODE 0 text17 dist/default/production\basicUARTcomms_Q71.X.production.o
+__Hramtop 1500 0 RAM 0 ramtop dist/default/production\basicUARTcomms_Q71.X.production.o
+__Hrparam 0 0 COMRAM 1 rparam dist/default/production\basicUARTcomms_Q71.X.production.o
+__activetblptr 3 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_UART2_Write 1880 0 CODE 0 text21 dist/default/production\basicUARTcomms_Q71.X.production.o
+__Hstruct 0 0 COMRAM 1 struct dist/default/production\basicUARTcomms_Q71.X.production.o
+__Htext10 0 0 ABS 0 text10 dist/default/production\basicUARTcomms_Q71.X.production.o
+__Htext11 0 0 ABS 0 text11 dist/default/production\basicUARTcomms_Q71.X.production.o
+__Htext12 0 0 ABS 0 text12 dist/default/production\basicUARTcomms_Q71.X.production.o
+__Htext13 0 0 ABS 0 text13 dist/default/production\basicUARTcomms_Q71.X.production.o
+__Htext14 0 0 ABS 0 text14 dist/default/production\basicUARTcomms_Q71.X.production.o
+__Htext15 0 0 ABS 0 text15 dist/default/production\basicUARTcomms_Q71.X.production.o
+__Htext16 0 0 ABS 0 text16 dist/default/production\basicUARTcomms_Q71.X.production.o
+__Htext17 0 0 ABS 0 text17 dist/default/production\basicUARTcomms_Q71.X.production.o
+__Htext18 0 0 ABS 0 text18 dist/default/production\basicUARTcomms_Q71.X.production.o
+__Htext19 0 0 ABS 0 text19 dist/default/production\basicUARTcomms_Q71.X.production.o
+__Htext20 0 0 ABS 0 text20 dist/default/production\basicUARTcomms_Q71.X.production.o
+__Htext21 0 0 ABS 0 text21 dist/default/production\basicUARTcomms_Q71.X.production.o
+_INTERRUPT_InterruptManager 1744 0 CODE 0 text13 dist/default/production\basicUARTcomms_Q71.X.production.o
+_IOCAFbits 407 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_PIE0bits 4A7 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_PIR10bits 4BC 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_PIE8bits 4AF 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+__end_of_UART2_DefaultOverrunErrorCallback 1A62 0 CODE 0 text16 dist/default/production\basicUARTcomms_Q71.X.production.o
+__ptext10 1A44 0 CODE 0 text10 dist/default/production\basicUARTcomms_Q71.X.production.o
+__ptext11 1A4E 0 CODE 0 text11 dist/default/production\basicUARTcomms_Q71.X.production.o
+__ptext12 1964 0 CODE 0 text12 dist/default/production\basicUARTcomms_Q71.X.production.o
+__ptext13 1744 0 CODE 0 text13 dist/default/production\basicUARTcomms_Q71.X.production.o
+__ptext14 18CA 0 CODE 0 text14 dist/default/production\basicUARTcomms_Q71.X.production.o
+__ptext15 1532 0 CODE 0 text15 dist/default/production\basicUARTcomms_Q71.X.production.o
+__ptext16 1A60 0 CODE 0 text16 dist/default/production\basicUARTcomms_Q71.X.production.o
+__ptext17 1A62 0 CODE 0 text17 dist/default/production\basicUARTcomms_Q71.X.production.o
+__ptext18 19FA 0 CODE 0 text18 dist/default/production\basicUARTcomms_Q71.X.production.o
+__ptext19 1934 0 CODE 0 text19 dist/default/production\basicUARTcomms_Q71.X.production.o
+__ptext20 1A58 0 CODE 0 text20 dist/default/production\basicUARTcomms_Q71.X.production.o
+__ptext21 1880 0 CODE 0 text21 dist/default/production\basicUARTcomms_Q71.X.production.o
+__end_of_PIN_MANAGER_Initialize 1744 0 CODE 0 text6 dist/default/production\basicUARTcomms_Q71.X.production.o
+__Lbank10 0 0 ABS 0 bank10 dist/default/production\basicUARTcomms_Q71.X.production.o
+__Lbank11 0 0 ABS 0 bank11 dist/default/production\basicUARTcomms_Q71.X.production.o
+__Lbank12 0 0 ABS 0 bank12 dist/default/production\basicUARTcomms_Q71.X.production.o
+__Lbank13 0 0 ABS 0 bank13 dist/default/production\basicUARTcomms_Q71.X.production.o
+__Lbank14 0 0 ABS 0 bank14 dist/default/production\basicUARTcomms_Q71.X.production.o
+__Lbank15 0 0 ABS 0 bank15 dist/default/production\basicUARTcomms_Q71.X.production.o
+__Lbank16 0 0 ABS 0 bank16 dist/default/production\basicUARTcomms_Q71.X.production.o
+__Lbank17 0 0 ABS 0 bank17 dist/default/production\basicUARTcomms_Q71.X.production.o
+__Lbank18 0 0 ABS 0 bank18 dist/default/production\basicUARTcomms_Q71.X.production.o
+__Lbank19 0 0 ABS 0 bank19 dist/default/production\basicUARTcomms_Q71.X.production.o
+__Lbank20 0 0 ABS 0 bank20 dist/default/production\basicUARTcomms_Q71.X.production.o
+__end_of_UART2_TransmitISR 1900 0 CODE 0 text14 dist/default/production\basicUARTcomms_Q71.X.production.o
+__Lbigbss 0 0 BIGRAM 1 bigbss dist/default/production\basicUARTcomms_Q71.X.production.o
+__Lbigram 0 0 ABS 0 bigram dist/default/production\basicUARTcomms_Q71.X.production.o
+__Lbigsfr 0 0 ABS 0 bigsfr dist/default/production\basicUARTcomms_Q71.X.production.o
+_INT2_InterruptHandler 52D 0 COMRAM 1 bssCOMRAM dist/default/production\basicUARTcomms_Q71.X.production.o
+_SW0_DefaultInterruptHandler 1A58 0 CODE 0 text20 dist/default/production\basicUARTcomms_Q71.X.production.o
+__Lcomram 0 0 ABS 0 comram dist/default/production\basicUARTcomms_Q71.X.production.o
+__Lconfig 0 0 CONFIG 4 config dist/default/production\basicUARTcomms_Q71.X.production.o
+_LATCbits 142 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+__Lfarbss 0 0 FARRAM 0 farbss dist/default/production\basicUARTcomms_Q71.X.production.o
+___inthi_stack_hi 0 0 STACK 2 stack C:\Users\C65471\AppData\Local\Temp\xcAso90.\driver_tmp_9.o
+___inthi_stack_lo 0 0 STACK 2 stack C:\Users\C65471\AppData\Local\Temp\xcAso90.\driver_tmp_9.o
+__Lfardata 0 0 FARRAM 0 fardata dist/default/production\basicUARTcomms_Q71.X.production.o
+isa$std 1 0 ABS 0 - C:\Users\C65471\AppData\Local\Temp\xcAso90.\driver_tmp_9.o
+__end_of_CLOCK_Initialize 1986 0 CODE 0 text12 dist/default/production\basicUARTcomms_Q71.X.production.o
+stackhi 0 0 ABS 0 - C:\Users\C65471\AppData\Local\Temp\xcAso90.\driver_tmp_9.o
+stacklo 0 0 ABS 0 - C:\Users\C65471\AppData\Local\Temp\xcAso90.\driver_tmp_9.o
+_UART2_IsRxReady 0 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_UART2_AutoBaudSet 0 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_OSCCON1 AD 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_OSCCON3 AF 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_OSCTUNE B0 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+__Lirdata 0 0 CODE 0 irdata dist/default/production\basicUARTcomms_Q71.X.production.o
+_uart2RxLastError 52B 0 COMRAM 1 bssCOMRAM dist/default/production\basicUARTcomms_Q71.X.production.o
+__Livt0x8 8 0 CODE 0 ivt0x8 dist/default/production\basicUARTcomms_Q71.X.production.o
+_INT1_InterruptHandler 52F 0 COMRAM 1 bssCOMRAM dist/default/production\basicUARTcomms_Q71.X.production.o
+__end_of_UART2_Initialize 1880 0 CODE 0 text2 dist/default/production\basicUARTcomms_Q71.X.production.o
+_UART2_OverrunErrorCallbackRegister 19C2 0 CODE 0 text4 dist/default/production\basicUARTcomms_Q71.X.production.o
+__end_of_UART2_ReceiveISR 164E 0 CODE 0 text15 dist/default/production\basicUARTcomms_Q71.X.production.o
+UART2_FramingErrorCallbackRegister@callbackHandler 53E 0 COMRAM 1 cstackCOMRAM dist/default/production\basicUARTcomms_Q71.X.production.o
+_INT1_DefaultInterruptHandler 0 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+__Lspace_0 0 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+__Lspace_1 0 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+__Lspace_2 0 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+__Lspace_4 0 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+__pbssCOMRAM 501 0 COMRAM 1 bssCOMRAM dist/default/production\basicUARTcomms_Q71.X.production.o
+_PIR0bits 4B2 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_PIR1bits 4B3 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_PIR6bits 4B8 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_PIR8bits 4BA 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+__LcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production\basicUARTcomms_Q71.X.production.o
+UART2_ReceiveISR@regValue 53A 0 COMRAM 1 cstackCOMRAM dist/default/production\basicUARTcomms_Q71.X.production.o
+end_of_initialization 19A0 0 CODE 0 cinit dist/default/production\basicUARTcomms_Q71.X.production.o
+__Lnvrram 0 0 COMRAM 1 nvrram dist/default/production\basicUARTcomms_Q71.X.production.o
+_uart2RxHead 535 0 COMRAM 1 bssCOMRAM dist/default/production\basicUARTcomms_Q71.X.production.o
+_uart2RxTail 534 0 COMRAM 1 bssCOMRAM dist/default/production\basicUARTcomms_Q71.X.production.o
+_UART2_Read 0 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_uart2TxHead 538 0 COMRAM 1 bssCOMRAM dist/default/production\basicUARTcomms_Q71.X.production.o
+_uart2TxTail 537 0 COMRAM 1 bssCOMRAM dist/default/production\basicUARTcomms_Q71.X.production.o
+__Hreset_vec 4 0 CODE 0 reset_vec dist/default/production\basicUARTcomms_Q71.X.production.o
+_INT0_InterruptHandler 531 0 COMRAM 1 bssCOMRAM dist/default/production\basicUARTcomms_Q71.X.production.o
+_INT1_SetInterruptHandler 1A44 0 CODE 0 text10 dist/default/production\basicUARTcomms_Q71.X.production.o
+__Lramtop 1500 0 RAM 0 ramtop dist/default/production\basicUARTcomms_Q71.X.production.o
+__Lrparam 0 0 COMRAM 1 rparam dist/default/production\basicUARTcomms_Q71.X.production.o
+__pcinit 1986 0 CODE 0 cinit dist/default/production\basicUARTcomms_Q71.X.production.o
+__ptext0 1A22 0 CODE 0 text0 dist/default/production\basicUARTcomms_Q71.X.production.o
+__ptext1 1A10 0 CODE 0 text1 dist/default/production\basicUARTcomms_Q71.X.production.o
+__ptext2 17EA 0 CODE 0 text2 dist/default/production\basicUARTcomms_Q71.X.production.o
+__ptext3 19A6 0 CODE 0 text3 dist/default/production\basicUARTcomms_Q71.X.production.o
+__ptext4 19C2 0 CODE 0 text4 dist/default/production\basicUARTcomms_Q71.X.production.o
+__ptext5 19DE 0 CODE 0 text5 dist/default/production\basicUARTcomms_Q71.X.production.o
+__ptext6 164E 0 CODE 0 text6 dist/default/production\basicUARTcomms_Q71.X.production.o
+__ptext7 1A30 0 CODE 0 text7 dist/default/production\basicUARTcomms_Q71.X.production.o
+__ptext8 1900 0 CODE 0 text8 dist/default/production\basicUARTcomms_Q71.X.production.o
+__ptext9 1A3A 0 CODE 0 text9 dist/default/production\basicUARTcomms_Q71.X.production.o
+_UART2_Deinitialize 0 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_U2UIRbits 2C4 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+__Lstruct 0 0 COMRAM 1 struct dist/default/production\basicUARTcomms_Q71.X.production.o
+__Ltext10 0 0 ABS 0 text10 dist/default/production\basicUARTcomms_Q71.X.production.o
+__Ltext11 0 0 ABS 0 text11 dist/default/production\basicUARTcomms_Q71.X.production.o
+__Ltext12 0 0 ABS 0 text12 dist/default/production\basicUARTcomms_Q71.X.production.o
+__Ltext13 0 0 ABS 0 text13 dist/default/production\basicUARTcomms_Q71.X.production.o
+__Ltext14 0 0 ABS 0 text14 dist/default/production\basicUARTcomms_Q71.X.production.o
+__Ltext15 0 0 ABS 0 text15 dist/default/production\basicUARTcomms_Q71.X.production.o
+__Ltext16 0 0 ABS 0 text16 dist/default/production\basicUARTcomms_Q71.X.production.o
+__Ltext17 0 0 ABS 0 text17 dist/default/production\basicUARTcomms_Q71.X.production.o
+__Ltext18 0 0 ABS 0 text18 dist/default/production\basicUARTcomms_Q71.X.production.o
+__Ltext19 0 0 ABS 0 text19 dist/default/production\basicUARTcomms_Q71.X.production.o
+__Ltext20 0 0 ABS 0 text20 dist/default/production\basicUARTcomms_Q71.X.production.o
+__Ltext21 0 0 ABS 0 text21 dist/default/production\basicUARTcomms_Q71.X.production.o
+__ramtop 1500 0 RAM 0 ramtop C:\Users\C65471\AppData\Local\Temp\xcAso90.\driver_tmp_9.o
+__Lpowerup 0 0 CODE 0 powerup dist/default/production\basicUARTcomms_Q71.X.production.o
+__Leeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\basicUARTcomms_Q71.X.production.o
+__H__absolute__ 0 0 ABS 0 __absolute__ dist/default/production\basicUARTcomms_Q71.X.production.o
+_UART2_TransmitISR 18CA 0 CODE 0 text14 dist/default/production\basicUARTcomms_Q71.X.production.o
+_UART2_TxCompleteInterruptHandler 523 0 COMRAM 1 bssCOMRAM dist/default/production\basicUARTcomms_Q71.X.production.o
+__psmallconst 1500 0 SMALLCONST 0 smallconst dist/default/production\basicUARTcomms_Q71.X.production.o
+_U2CON0bits 2BE 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_U2CON1bits 2BF 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+__Lreset_vec 0 0 CODE 0 reset_vec dist/default/production\basicUARTcomms_Q71.X.production.o
+INT0_SetInterruptHandler@InterruptHandler 53E 0 COMRAM 1 cstackCOMRAM dist/default/production\basicUARTcomms_Q71.X.production.o
+_UART2_FramingErrorCallbackRegister 19DE 0 CODE 0 text5 dist/default/production\basicUARTcomms_Q71.X.production.o
+_SLRCONA 403 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_SLRCONB 40B 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_SLRCONC 413 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_SLRCOND 41B 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_SLRCONE 423 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_SLRCONF 42B 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+___heap_hi 0 0 ABS 0 - C:\Users\C65471\AppData\Local\Temp\xcAso90.\driver_tmp_9.o
+___heap_lo 0 0 ABS 0 - C:\Users\C65471\AppData\Local\Temp\xcAso90.\driver_tmp_9.o
+___param_bank 0 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+___intlo_stack_hi 0 0 STACK 2 stack C:\Users\C65471\AppData\Local\Temp\xcAso90.\driver_tmp_9.o
+___intlo_stack_lo 0 0 STACK 2 stack C:\Users\C65471\AppData\Local\Temp\xcAso90.\driver_tmp_9.o
+__Hbigdata 0 0 BIGRAM 1 bigdata dist/default/production\basicUARTcomms_Q71.X.production.o
+__end_of__initialization 19A0 0 CODE 0 cinit dist/default/production\basicUARTcomms_Q71.X.production.o
+__Libigdata 0 0 CODE 0 ibigdata dist/default/production\basicUARTcomms_Q71.X.production.o
+__Lclrtext 0 0 ABS 0 clrtext dist/default/production\basicUARTcomms_Q71.X.production.o
+__end_of_INT0_SetInterruptHandler 1A58 0 CODE 0 text11 dist/default/production\basicUARTcomms_Q71.X.production.o
+_UART2_AutoBaudQuery 0 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+__pcstackCOMRAM 539 0 COMRAM 1 cstackCOMRAM dist/default/production\basicUARTcomms_Q71.X.production.o
+__end_of_main 1A30 0 CODE 0 text0 dist/default/production\basicUARTcomms_Q71.X.production.o
+__end_of_UART2 1531 0 SMALLCONST 0 smallconst dist/default/production\basicUARTcomms_Q71.X.production.o
+_IOCAF 407 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_IOCAN 406 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_IOCAP 405 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_IOCBF 40F 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_IOCBN 40E 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_IOCBP 40D 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_IOCCF 417 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_IOCCN 416 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_IOCCP 415 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_IOCEF 427 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_IOCEN 426 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_IOCEP 425 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_IOCWF 43F 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_IOCWN 43E 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_IOCWP 43D 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_OSCEN B3 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_TRISA 148 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_TRISB 149 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_TRISC 14A 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_TRISD 14B 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_TRISE 14C 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_TRISF 14D 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_U2P1L 2B8 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_U2P2L 2BA 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_U2P3L 2BC 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_U2RXB 2B4 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_U2TXB 2B6 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_U2UIR 2C4 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+_UART2 1501 0 SMALLCONST 0 smallconst dist/default/production\basicUARTcomms_Q71.X.production.o
+_SW0_ISR 1934 0 CODE 0 text19 dist/default/production\basicUARTcomms_Q71.X.production.o
+__HRAM 0 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+__Hbss 0 0 RAM 1 bss dist/default/production\basicUARTcomms_Q71.X.production.o
+__Hram 0 0 ABS 0 ram dist/default/production\basicUARTcomms_Q71.X.production.o
+__Hsfr 0 0 ABS 0 sfr dist/default/production\basicUARTcomms_Q71.X.production.o
+__LRAM 1 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+__Lbss 0 0 RAM 1 bss dist/default/production\basicUARTcomms_Q71.X.production.o
+__Lram 0 0 ABS 0 ram dist/default/production\basicUARTcomms_Q71.X.production.o
+__Lsfr 0 0 ABS 0 sfr dist/default/production\basicUARTcomms_Q71.X.production.o
+__end_of_UART2_OverrunErrorCallbackRegister 19DE 0 CODE 0 text4 dist/default/production\basicUARTcomms_Q71.X.production.o
+UART2_OverrunErrorCallbackRegister@callbackHandler 53E 0 COMRAM 1 cstackCOMRAM dist/default/production\basicUARTcomms_Q71.X.production.o
+__initialization 1986 0 CODE 0 cinit dist/default/production\basicUARTcomms_Q71.X.production.o
+__Hfardata 0 0 FARRAM 0 fardata dist/default/production\basicUARTcomms_Q71.X.production.o
+__Hsmallconst 1532 0 SMALLCONST 0 smallconst dist/default/production\basicUARTcomms_Q71.X.production.o
+__end_of_UART2_Write 18CA 0 CODE 0 text21 dist/default/production\basicUARTcomms_Q71.X.production.o
+__Lifardata 0 0 CODE 0 ifardata dist/default/production\basicUARTcomms_Q71.X.production.o
+_FSCMCON 458 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+__Hintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production\basicUARTcomms_Q71.X.production.o
+_uart2TxBufferRemaining 536 0 COMRAM 1 bssCOMRAM dist/default/production\basicUARTcomms_Q71.X.production.o
+_U2ERRIRbits 2C5 0 ABS 0 - dist/default/production\basicUARTcomms_Q71.X.production.o
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+ivt0x8 0 8 8 16 1
+text15 0 1532 1532 532 1
+reset_vec 0 0 0 4 1
+smallconst 0 1500 1500 32 1
+bssCOMRAM 1 501 501 45 1
+# %NOTES Section
+# This section contains data of all the note-psects.  The beginning of the section
+# is indicated by %NOTES. The first line indicates the name and decimal
+# byte-length of the first note-psect, e.g.
+#   $codecov_info_hdr 16
+# Each line that follows contains the byte-data of the psect in hexadecimal as a
+# space-separated list. These lines are limited to 16 bytes of data.
+%NOTES

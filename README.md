@@ -5,11 +5,11 @@
 
 # Basic Bidirectional UART Communication Using the PIC18F56Q71
 ## Overview
-This project uses the MPLAB® Code Configurator (MCC) Melody graphical programming tool to configure the PIC18F56Q71 device populating a Curiosity Nano (Cnano) board to receive and output single ASCII characters over the integrated Serial/CDC port. When the switch on the Cnano board is pressed, a pin change interrupt is triggered and the ASCII character 'S' is transmitted over the Universal Asynchronous Receiver Transmitter (UART), converted to the USB protocol and then displayed in the MPLAB Data Visualizer terminal window. When the ASCII character 'T' is entered in the Data Visualizer terminal window, the value is transmitted over USB and then converted to the UART protocol. A UART Receive interrupt will then be triggered and the 'LED' on the Cnano board will toggle ON/OFF. No other character will generate the interrupt.
+This project uses the MPLAB® Code Configurator (MCC) Melody graphical programming tool to configure the PIC18F56Q71 device populating a Curiosity Nano (Cnano) board to receive and output single ASCII characters over the integrated Serial/CDC port. When the switch on the Cnano board is pressed, the pin is driven LOW, firmware will then trigger the Universal Asynchronous Receiver Transmitter (UART) peripheral to transmit the ASCII character 'S' over the Universal Asynchronous Receiver Transmitter (UART) that is converted to the USB protocol using integrated hardware on the Cnano so that it can then be displayed in the MPLAB Data Visualizer terminal window within the MPLAB® X IDE. When the ASCII character 'T' is entered in the Data Visualizer terminal window, the value is transmitted over USB and then converted to the UART protocol. A UART receive flag will trigger firmware to check the value, if it is an 'T' the 'LED' on the Cnano board will toggle ON/OFF.
 
 ![Basic Bidirectionsl UART Communications](images/mainImage.png)
 
-**Note:** The following project can be used as a reference for most PIC® devices, with some modifications. 
+**Note:** The following project can be used as a reference for most PIC® devices, with some modifications.
 
 ## Related Documentation
 - [Get Started Now With PIC® Microcontrollers (MCUs)](https://www.microchip.com/en-us/products/microcontrollers-and-microprocessors/8-bit-mcus/pic-mcus/get-started-now?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_pic18q71&utm_content=pic18f56q71-basic-uart-comms-mplab-mcc-github&utm_bu=MCU08) - Includes tool installation and other introductory resources
@@ -31,7 +31,7 @@ This project uses the MPLAB® Code Configurator (MCC) Melody graphical programmi
 
 Create a new project inside of MPLAB X IDE and open MCC Melody by either clicking the icon at the top of the IDE or by selecting *Tools>Embedded>MPLAB Code Configurator v.x: Open/Close*.
 
-Once inside of the MCC Melody plug-in, add an instance of the UART peripheral from the **Device Resources** tab: 
+Once inside of the MCC Melody plug-in, add an instance of the UART peripheral from the **Device Resources** tab:
 
 ![Add UART Peripherals](images/addUART.png)
 
@@ -41,7 +41,7 @@ Next, configure the UART by selecting the UART(None) instance in either the **Pr
 
 ![Select UART(None)](images/selectUARTnone.png)
 
-The PIC18F56Q71 populating the Cnano board features two UART peripherals. The correct UART must be selected as the hardware that converts the UART signal to and from USB connectors to specific pins on the device. Determining which UART and pins to use can be found in the PIC18F56Q71 Cnano schematic. A link to the schematic is available in the **Kit Window** which opens whenever a Cnano board is connected to the computer and MPLAB X IDE is open or by selecting *Window>Kit Window* inside of the IDE. 
+The PIC18F56Q71 populating the Cnano board features two UART peripherals. The correct UART must be selected as the hardware that converts the UART signal to and from USB connectors to specific pins on the device. Determining which UART and pins to use can be found in the PIC18F56Q71 Cnano schematic. A link to the schematic is available in the **Kit Window** which opens whenever a Cnano board is connected to the computer and MPLAB X IDE is open or by selecting *Window>Kit Window* inside of the IDE.
 
 ![Curiosity Nano Kit Window](images/curiosityNanoKitWindow.png)
 
@@ -56,27 +56,20 @@ In  **Easy View**  select UART2 from the UART PLIB Selector.
 
 ![Select UART2](images/selectUART2.png)
 
+
 The image below presents the **Builder** tab:
 
 ![UART2 Builder](images/uart2PLIB.png)
 
-Select the UART2 driver either from the **Project Resources** panel or from the **Builder** window to open the  **Easy View**  settings in the **UART2** tab.
+Clicking on the UART2 Library/Driver block to open the associated Easy View. Inside of the Easy View, edit the **Requested Baudrate** value ensuring that it is 9600.
 
-![Open UART2 Easy View](images/openingUART2EasyView.png)
-
-Inside  **Easy View**  enable interrupts in the Interrupt Settings section by toggling the Interrupt Driven slider to the ON position and leaving all other settings at their default:
-
-![Enable UART2 Interrupts](images/enableUART2Interrupts.png)
-
-Select the UART2PLIB instance in the **Builder** window to open its  **Easy View**  and ensure that both Receive and Transmit Interrupts have been enabled:
-
-![UART2 PLIB Interrupts](images/UART2PLIBInterrupts.png)
+All other configuration parameters can be left at their default.
 
 In the **Pin Grid View** tab at the bottom of the Melody interface, connect the UART2>RX2 signal to pin RB5 (package pin #17) and the UART2>TX2 signal to pin RB4 (package pin #16) by clicking the lock icon associated with them:
 
 ![UART2 Pin Grid View Configuration](images/UART2PinGridView.png)
 
-Next, configure the pins associated with the Curiosity Nano switch and LED. 
+Next, configure the pins associated with the Curiosity Nano switch and LED.
 
 In the **Pin Grid View** tab, connect pin RA0 (package pin #21) that is connected to the switch (SW0) on the Curiosity Nano board as a General Purpose Input/Output (GPIO) input and pin RC7 (package pin #1) connected to the 'LED' (LED0) as an output by clicking the appropriate grid square for the associated signal:
 
@@ -95,69 +88,49 @@ Note from the Curiosity Nano schematics that the 'SW0' is active LOW and connect
 
 ![Enabling Weak Pullups](images/enableWeakPullups.png)
 
-An Interrupt-on-Change (IoC) will be generated when the voltage on the pin associated with 'SW0' changes. Since the switch on the Curiosity Nano board is active LOW, this means that the switch resting state will be HIGH until pressed. Therefore, the Interrrupt on Change column setting for the 'SW0' pin is configured to trigger on the negative transition of the pin voltage using the drop-down menu:
+Finally, a delay is implemented in this project using the DELAY Library. Add an Delay instance from the Device Resources from the Timer menu.
 
-![Enabling Sense Falling Edge](images/negativeIOC.png)
+The MCC Melody project should now resemble the image below:
+
+![Adding the DELAY Library](images/DELAYinDeviceResources.png)  
 
 Click the **Generate** button in **Project Resources** to generate the API based on the above configurations:
 
 ![Generate Code](images/generateAPI.png)
 
 
-## Using Interrupts in Generated API
+## Using the Generated API
 
-Navigate to the **Projects** tab in MPLAB X IDE. Locate the `uart2.c` source file by expanding the folders *basicUARTcomms_Q71>Source Files>MCC Generated Files>uart>uart.c*. Double click `uart2.c` to open and do the following: 
+Navigate to the **Projects** tab in MPLAB X IDE. Locate the `main.c` source file by expanding the folders *basicUARTcomms_Q71>Source Files>main.c*. Double click `main.c` to open and do the following:
 
-Scroll down to `UART2_ReceiveISR()`. When the UART detects a received value on its receive (RX) pin, an interrupt will be generated and this section of code will be executed:
+Scroll down to `main()`.
 
-![UART2 Receive ISR](images/UART2receiveISR.png)
+Wen the switch is pressed, according to the Cnano schematics, the siganl on the SW0 (formerly RA0) pin will be driven LOW. When this occurs, the UART will be triggered to transmit an 'S' ASCII character over it's TX line.
 
-Inside of the Interrupt Service Routine (ISR), locate the section that reads the received value. This is done using the `regValue` variable to read the contents of the UART2 Receive Register (U2RXB). 
+To check the pin, add an `if` statement that will use the `SW0_GetValue()` which return the current pin state. If that value is LOW, then execute code to transmit 'S' character by adding that as an argument to the `UART2_Write('S')` macro. A 350 ms delay is next added using the `DELAY_milliseconds(350)` macro to allow the user to release the switch before the next pin check has a chance to occur.
 
-![Locating the reg_value Variable](images/locating_regValue.png)
+An API generated macro or function can be added by starting with typing the peripheral and then on a Windows machine using the CTRL+space feature to pull up a list of available libraries and double clicking on the one to add.
 
-**Note:** Reading the U2RXB register clears the value inside of the register. 
+![Adding an API Function or Macro](images/AddingAPIFunction.png)
 
-This variable checks the value received. A 'T' value/character toggles the 'LED' ON/OFF, otherwise nothing happens. To do this, use the `regValue` variable along a generated macro called `LED_Toggle()`, based on the unique name given to pin RC7 in the previous section,  inside an `if` statement, as follows:
+The user then need only add the parameters required, in this case the 'S', and ensuring that the semicolon is added at the end of the line of code. In addition, when adding the `SW0_GetValue` macro the `()` will need to be added by the user.
 
-` if(regValue == 'T')LED_Toggle();`
+![Adding UART2_Write()](images/addingUART2Write.png)
 
-Add the above code immediately below the `regValue = U2RXB;` in the receive ISR:
+Next, a second `if` statement is used to check if a character has been received over the UART using the `UART2_IsRxReady()` macro. If TRUE an 8-bit variable `rxValue` initialized prior to the `while(1)` loop is loaded with the received value using the `UART2_Read()`. This value is then checked using a final `if` statement for the 'T' ASCII character. If this condition is TRUE, the voltage level of the pin connected to the LED (RC7) is toggle HIGH or LOW (depending on previous state) using the `LED_Toggle()` macro.
 
-![Using the LED_Toggle() Macro](images/togglingTheLED.png)
+The final code should resemble the image below:
 
-**Note:** The `LED_Toggle()` macro can be viewed in the `pins.h` header file located in *basicUARTcomms_Q71>Header Files>MCC Generated Files>system>pins.h*:
-
-![Using the LED_Toggle() Macro](images/togglingTheLED.png)
-
-Next, configure the 'SW0' interrupt to transmit the character 'S' over the UART when pressed. Navigate to the `pins.c` file in *basicUARTcomms_Q71>Source Files>MCC Generated Files>system>src>pins.c*. Scroll through the file to locate the `SW0_DefaultInterruptHandler()` ISR named after the custom name added to pin RA0 in the previous section:
-
-![Locating the 'SW0' ISR](images/SW0_ISR.png)
-
-Inside the ISR, add the following code to transmit the character 'S' using the `UART2_Write()`  when the 'SW0' is pressed below the commented section:
-
-`UART2_Write('S');`
- 
-![Adding the USART3_Write()](images/addingUARTWrite.png)
-
-In order to use the `UART2_Write()`, the *uart2.h* file must be added. Scroll to the top of the `pins.c` source file and add the following code immediately below the `#include "../pins.h"` include:
+![Final Firmware](images/basicUARTComms_FW.png)
 
 
-`#include "../../uart/uart2.h"`
 
-![Including USART3.h](images/includeUART2header.png)
+## Program the Cnano Board and Configure the Data Visualizer Plugin
 
-
-Enable global interrupts to use any interrupts based on the PIC18F56Q71. This is easily done by navigating to the *basicUARTcomms_Q71>Source Files>main.c* and scrolling to the `main()` function. At the top of the function, uncomment the  `//INTERRUPT_GlobalInterruptEnable();` macro by deleting the two forward slashes:
-
-![Enable Global Interrupts](images/enableGlobalInterrupts.png)
-
-Finally, program the PIC18F56Q71 by hitting the **Make and Program Device Main Project** button at the top of the IDE:
+Program the PIC18F56Q71 by hitting the **Make and Program Device Main Project** button at the top of the IDE:
 
 ![Make and Program Device](images/makeANDprogram.png)
 
-
-## Operation
 
 The Data Visualizer MPLAB X IDE plug-in will be used to verify operation of the project.
 
@@ -165,7 +138,7 @@ Click the Data Visualizer plugin button at the top of the IDE to open:
 
 ![Open Data Visualizer](images/openDataVisualizer.png)
 
-The PIC18F56Q71 Curiosity Nano board is recognized by the Data Visualizer, including the associated COM port. Note that the COM port number may differ than what is shown below. 
+The PIC18F56Q71 Curiosity Nano board is recognized by the Data Visualizer, including the associated COM port. Note that the COM port number may differ than what is shown below.
 
 ![Data Visualizer](images/dataVisualizer.png)
 
@@ -173,12 +146,13 @@ The terminal window will be the only one used, so the rest can be closed, as sho
 
 ![Select Terminal](images/selectTerminal.png)
 
+## Operation
 
-Verify that the UART2 receive interrupt is working by clicking inside of the terminal window and entering the character 'T'. This action will toggle the 'LED' on the Curiosity Nano board ON/OFF. Entering any other character will have no effect.
+Verify the 'SW0' pin level code by pressing the switch on the Curiosity Nano board. The character 'S' will be output to the terminal.
 
-Verify the 'SW0' Interrupt-on-Change by pressing the switch on the Curiosity Nano board. The character 'S' will be output to the terminal.
+Verify UART receive firware is working by clicking inside of the terminal window and entering the character 'T'. This action will toggle the 'LED' on the Curiosity Nano board ON/OFF. Entering any other character will have no effect.
 
-![Verify Demo](images/verify.gif)
+![Verify Operation](images/verify.gif)
 
 
 ## Summary

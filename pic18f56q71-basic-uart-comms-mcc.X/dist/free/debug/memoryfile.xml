@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+  <executable name="dist/free/debug\pic18f56q71-basic-uart-comms-mcc.X.debug.hex">
+    <memory name="program">
+      <units>bytes</units>
+      <length>65536</length>
+      <used>834</used>
+      <free>64702</free>
+    </memory>
+    <memory name="data">
+      <units>bytes</units>
+      <length>4096</length>
+      <used>18</used>
+      <free>4078</free>
+    </memory>
+  </executable>
+</project>
